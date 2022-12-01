@@ -1,0 +1,1 @@
+/Users/alsa/Documents/adventofcode2022/java/build/classes/java/main/Main.class:/Users/alsa/Documents/adventofcode2022/java/build/classes/java/main/helper/MyFileReader.class
