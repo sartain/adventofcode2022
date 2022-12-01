@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="adventTests.Advent01Test" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-12-01T15:20:54" hostname="Alexs-MacBook-Pro.local" time="0.029">
+  <properties/>
+  <testcase name="testFindBiggestElf()" classname="adventTests.Advent01Test" time="0.024"/>
+  <testcase name="testFindBiggestElfAndValue()" classname="adventTests.Advent01Test" time="0.001"/>
+  <testcase name="testSplitElfValueIntoTotal()" classname="adventTests.Advent01Test" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
