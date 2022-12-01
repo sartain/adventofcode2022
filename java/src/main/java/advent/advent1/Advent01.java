@@ -1,5 +1,7 @@
-package advent;
+package advent.advent1;
 
+import advent.Advent;
+import advent.AdventRunner;
 import helper.MyFileReader;
 
 import java.lang.reflect.Array;
@@ -7,7 +9,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class Advent01 implements Advent{
+public class Advent01 implements Advent {
 
     private Stream<String> fileLines;
 
@@ -26,7 +28,7 @@ public class Advent01 implements Advent{
 
     @Override
     public String partOne() {
-        return null;
+        return String.valueOf(getLargestElf().getValue());
     }
 
     @Override
@@ -34,14 +36,16 @@ public class Advent01 implements Advent{
         return null;
     }
 
-    public Integer[] splitElfCalories() {
+    public Elf[] splitElfCalories() {
         List<String> elfList = fileLines.collect(Collectors.toList());
-        List<Integer> elfCaloriesList = new ArrayList<>();
+        List<Elf> elfCaloriesList = new ArrayList<>();
         //Loop through, if string not empty retrieve value and add
         int count = 0;
+        int elfCount = 0;
         for(String elfCalorie : elfList) {
             if(elfCalorie.isBlank()) {
-                elfCaloriesList.add(count);
+                elfCount += 1;
+                elfCaloriesList.add(new Elf(elfCount, count));
                 count = 0;
             }
             else {
@@ -49,21 +53,21 @@ public class Advent01 implements Advent{
             }
         }
         //catch final
-        elfCaloriesList.add(count);
-        return elfCaloriesList.toArray(Integer[]::new);
+        elfCaloriesList.add(new Elf(elfCount + 1, count));
+        return elfCaloriesList.toArray(Elf[]::new);
     }
 
-    public Integer[] getLargestElf() {
-        Integer[] elfCalorieList = splitElfCalories();
+    public Elf getLargestElf() {
+        Elf[] elfCalorieList = splitElfCalories();
         int maxValue = 0;
-        int indexOfElf = 0;
-        for(int i = 0; i < elfCalorieList.length; i ++) {
-            if(elfCalorieList[i] > maxValue) {
-                indexOfElf = i;
-                maxValue = elfCalorieList[i];
+        Elf maxElf = null;
+        for(Elf elf : elfCalorieList) {
+            if(elf.getValue() > maxValue) {
+                maxValue = elf.getValue();
+                maxElf = elf;
             }
         }
-        return new Integer[] {indexOfElf+1, maxValue};
+        return maxElf;
     }
 
 }
