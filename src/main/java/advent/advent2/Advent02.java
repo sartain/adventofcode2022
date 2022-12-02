@@ -41,13 +41,12 @@ public class Advent02 implements Advent {
     public List<Character> getPlayerList(boolean firstPlayer) {
         List<String> rpsRounds = fileLines.collect(Collectors.toList());
         List<Character> playerMoveList = new ArrayList<>();
-        for(String round : rpsRounds) {
-            char playerOneGuess = round.toCharArray()[0];
-            char playerTwoGuess = round.toCharArray()[2];
+        for(String roundString : rpsRounds) {
+            Round round = new Round(roundString);
             if(firstPlayer)
-                playerMoveList.add(playerOneGuess);
+                playerMoveList.add(round.getPlayerOneMove());
             else
-                playerMoveList.add(playerTwoGuess);
+                playerMoveList.add(round.getPlayerTwoMove());
         }
         return playerMoveList;
     }
