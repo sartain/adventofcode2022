@@ -6,8 +6,6 @@ public class RPSMove {
 
     int score;
     RPSMoves value;
-    RPSMoves winsAgainst;
-    RPSMoves losesAgainst;
 
     public int getScore() {
         return this.score;

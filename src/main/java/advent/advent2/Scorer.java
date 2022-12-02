@@ -5,6 +5,10 @@ import advent.advent2.moves.RPSMoves;
 
 public class Scorer {
 
+    private static final int pointsForLoss = 0;
+    private static final int pointsForDraw = 3;
+    private static final int pointsForWin = 6;
+
     public static int getScoreGivenCharacter(RPSMove move) {
         return move.getScore();
     }
@@ -13,13 +17,13 @@ public class Scorer {
         RPSMoves playerOneMove = playerOne.getValue();
         RPSMoves playerTwoMove = playerTwo.getValue();
         if(playerOneMove.equals(playerTwoMove)) {
-            return 3;
+            return pointsForDraw;
         }
         if(playerOne.getWinsAgainst().equals(playerTwo.getValue())) {
-            return 0;
+            return pointsForLoss;
         }
-        else
-            return 6;
+        else    //wins
+            return pointsForWin;
     }
 
 }
