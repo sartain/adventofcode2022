@@ -36,7 +36,7 @@ public class Advent02 implements Advent {
 
     @Override
     public String partOne() {
-        return null;
+        return String.valueOf(scorePlayerTwoGame());
     }
 
     @Override
@@ -81,6 +81,10 @@ public class Advent02 implements Advent {
             totalScore += Scorer.getScoreGivenRound(playerOneList.get(i), playerTwoList.get(i));
         }
         return totalScore;
+    }
+
+    public int scorePlayerTwoGame() {
+        return scorePlayerTwoIndividualValues() + scorePlayerTwoRounds();
     }
 
 }

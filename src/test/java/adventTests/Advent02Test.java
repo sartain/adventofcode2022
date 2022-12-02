@@ -44,4 +44,12 @@ public class Advent02Test {
         assertEquals(expectedScore, actualScore);
     }
 
+    @Test
+    void testScoreTotalGame() {
+        int expectedScore = 15;
+        Advent02 advent = new Advent02(AdventRunner.TEST);
+        int actualScore = advent.scorePlayerTwoGame();
+        assertEquals(expectedScore, actualScore);
+    }
+
 }
