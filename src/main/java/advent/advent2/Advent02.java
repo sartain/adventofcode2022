@@ -58,4 +58,10 @@ public class Advent02 implements Advent {
     public List<Character> getPlayerTwoList() {
         return getPlayerList(false);
     }
+
+    public int scorePlayerTwoIndividualValues() {
+        List<Character> playerList = getPlayerTwoList();
+        return playerList.stream().map(Scorer::getScoreGivenCharacter).reduce(0, Integer::sum);
+    }
+
 }

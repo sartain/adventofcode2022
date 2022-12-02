@@ -6,6 +6,7 @@ import advent.advent2.Advent02;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class Advent02Test {
 
@@ -23,6 +24,14 @@ public class Advent02Test {
         Advent02 advent = new Advent02(AdventRunner.TEST);
         Character[] actualPlayerTwoList = advent.getPlayerTwoList().toArray(Character[]::new);
         assertArrayEquals(expectedPlayerTwoList, actualPlayerTwoList);
+    }
+
+    @Test
+    void testScoreIndividualValues() {
+        int expectedScore = 6;
+        Advent02 advent = new Advent02(AdventRunner.TEST);
+        int actualScore = advent.scorePlayerTwoIndividualValues();
+        assertEquals(expectedScore, actualScore);
     }
 
 }
