@@ -66,6 +66,31 @@ public class Advent01 implements Advent {
     }
 
     public List<Elf> getThreeLargestElves() {
+        List<Elf> elfCalorieList = splitElfCalories();
+        List<Elf> threeLargestElves = new ArrayList<>();
+
+        try {
+            //Get maximum Elf then remove from list
+            int max = elfCalorieList.stream().mapToInt(Elf::getValue).max().orElseThrow(NoSuchElementException::new);
+            Elf largest = elfCalorieList.stream().filter(e -> e.getValue() == max).distinct().collect(Collectors.toList()).get(0);
+            elfCalorieList.remove(largest);
+            threeLargestElves.add(largest);
+            //Get second maximum
+            int secondMax = elfCalorieList.stream().mapToInt(Elf::getValue).max().orElseThrow(NoSuchElementException::new);
+            Elf secondLargest = elfCalorieList.stream().filter(e -> e.getValue() == secondMax).distinct().collect(Collectors.toList()).get(0);
+            elfCalorieList.remove(secondLargest);
+            threeLargestElves.add(secondLargest);
+            //Get third maximum
+            int thirdMax = elfCalorieList.stream().mapToInt(Elf::getValue).max().orElseThrow(NoSuchElementException::new);
+            Elf thirdLargest = elfCalorieList.stream().filter(e -> e.getValue() == thirdMax).distinct().collect(Collectors.toList()).get(0);
+            elfCalorieList.remove(thirdLargest);
+            threeLargestElves.add(thirdLargest);
+            //Return value
+            return threeLargestElves;
+        }
+        catch(Exception e) {
+            System.out.println("There are not enough elves");
+        }
         return new ArrayList<>();
     }
 

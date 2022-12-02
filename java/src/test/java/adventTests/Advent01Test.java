@@ -43,7 +43,7 @@ public class Advent01Test {
 
     @Test
     void testFindThreeBiggestElves() {
-        Integer[] expectedTotals = {100, 110, 120};
+        Integer[] expectedTotals = {120, 110, 100};
         Advent01 advent = new Advent01(AdventRunner.TEST);
         Integer[] actualTotals = advent.getThreeLargestElves().stream().map(Elf::getValue).toArray(Integer[]::new);
         assertArrayEquals(expectedTotals, actualTotals);
