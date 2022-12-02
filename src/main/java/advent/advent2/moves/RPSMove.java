@@ -5,6 +5,7 @@ public class RPSMove {
     int score;
     RPSMoves value;
     RPSMoves winsAgainst;
+    RPSMoves losesAgainst;
 
     public int getScore() {
         return this.score;
@@ -16,6 +17,10 @@ public class RPSMove {
 
     public RPSMoves getWinsAgainst() {
         return this.winsAgainst;
+    }
+
+    public RPSMoves getLosesAgainst() {
+        return this.losesAgainst;
     }
 
 }

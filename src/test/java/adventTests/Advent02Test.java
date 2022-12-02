@@ -52,4 +52,12 @@ public class Advent02Test {
         assertEquals(expectedScore, actualScore);
     }
 
+    @Test
+    void testGetPlayerTwoListPartTwo() {
+        RPSMoves[] expectedPlayerTwoList = {RPSMoves.ROCK, RPSMoves.ROCK, RPSMoves.ROCK};
+        Advent02 advent = new Advent02(AdventRunner.TEST);
+        RPSMoves[] actualPlayerTwoList = advent.getPlayerTwoListPartTwo().stream().map(RPSMove::getValue).toArray(RPSMoves[]::new);
+        assertArrayEquals(expectedPlayerTwoList, actualPlayerTwoList);
+    }
+
 }

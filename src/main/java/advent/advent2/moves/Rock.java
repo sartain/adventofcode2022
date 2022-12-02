@@ -7,6 +7,7 @@ public class Rock extends RPSMove {
         this.score = 1;
         this.value = RPSMoves.ROCK;
         this.winsAgainst = RPSMoves.SCISSORS;
+        this.losesAgainst = RPSMoves.PAPER;
     }
 
 }

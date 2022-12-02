@@ -7,6 +7,7 @@ public class Paper extends RPSMove {
         this.score = 2;
         this.value = RPSMoves.PAPER;
         this.winsAgainst = RPSMoves.ROCK;
+        this.losesAgainst = RPSMoves.SCISSORS;
     }
 
 }

@@ -3,7 +3,6 @@ package advent.advent2;
 import advent.Advent;
 import advent.AdventRunner;
 import advent.advent2.moves.RPSMove;
-import advent.advent2.moves.RPSMoves;
 import helper.MyFileReader;
 
 import java.util.ArrayList;
@@ -46,12 +45,13 @@ public class Advent02 implements Advent {
 
     //Expectation is that round has two char values
 
-    public List<RPSMove> getPlayerList(boolean firstPlayer) {
+
+    public List<RPSMove> getPlayerList(boolean firstPlayer, boolean partOne) {
         readFile(this.adventRunner);
         List<String> rpsRounds = fileLines.collect(Collectors.toList());
         List<RPSMove> playerMoveList = new ArrayList<>();
         for(String roundString : rpsRounds) {
-            Round round = new Round(roundString);
+            Round round = new Round(roundString, partOne);
             if(firstPlayer)
                 playerMoveList.add(round.getPlayerOneMove());
             else
@@ -61,11 +61,15 @@ public class Advent02 implements Advent {
     }
 
     public List<RPSMove> getPlayerOneList() {
-        return getPlayerList(true);
+        return getPlayerList(true, true);
     }
 
     public List<RPSMove> getPlayerTwoList() {
-        return getPlayerList(false);
+        return getPlayerList(false, true);
+    }
+
+    public List<RPSMove> getPlayerTwoListPartTwo() {
+        return getPlayerList(false, false);
     }
 
     public int scorePlayerTwoIndividualValues() {
