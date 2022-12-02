@@ -36,7 +36,7 @@ public class Advent01 implements Advent {
         return null;
     }
 
-    public Elf[] splitElfCalories() {
+    public List<Elf> splitElfCalories() {
         List<String> elfList = fileLines.collect(Collectors.toList());
         List<Elf> elfCaloriesList = new ArrayList<>();
         int calorieCount = 0;
@@ -53,16 +53,20 @@ public class Advent01 implements Advent {
         }
         //catch final
         elfCaloriesList.add(new Elf(elfIndex + 1, calorieCount));
-        return elfCaloriesList.toArray(Elf[]::new);
+        return elfCaloriesList;
     }
 
     //Retrieve max value out of elf calorie list
     //Return Elf record where max value is present
 
     public Elf getLargestElf() {
-        Elf[] elfCalorieList = splitElfCalories();
-        int max = Arrays.stream(elfCalorieList).mapToInt(Elf::getValue).max().orElseThrow(NoSuchElementException::new);
-        return Arrays.stream(elfCalorieList).filter(e -> e.getValue() == max).distinct().collect(Collectors.toList()).get(0);
+        List<Elf> elfCalorieList = splitElfCalories();
+        int max = elfCalorieList.stream().mapToInt(Elf::getValue).max().orElseThrow(NoSuchElementException::new);
+        return elfCalorieList.stream().filter(e -> e.getValue() == max).distinct().collect(Collectors.toList()).get(0);
+    }
+
+    public List<Elf> getThreeLargestElves() {
+        return new ArrayList<>();
     }
 
 }

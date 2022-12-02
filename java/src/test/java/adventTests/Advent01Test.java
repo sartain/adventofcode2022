@@ -6,6 +6,7 @@ import advent.advent1.Elf;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -16,29 +17,29 @@ public class Advent01Test {
     void testSplitElfValueIntoTotal() {
         Integer[] expectedTotals = {100, 110, 120};
         Advent01 advent = new Advent01(AdventRunner.TEST);
-        Elf[] actualTotals = advent.splitElfCalories();
+        Elf[] actualTotals = advent.splitElfCalories().toArray(Elf[]::new);
         Integer[] elfMaxValues = Arrays.stream(actualTotals).map(Elf::getValue).toArray(Integer[]::new);
         assertArrayEquals(expectedTotals, elfMaxValues);
     }
 
     @Test
     void testFindBiggestElf() {
-        int expectedValue = 3;
+        int expectedElf = 3;
         Advent01 advent = new Advent01(AdventRunner.TEST);
-        int actualValue = advent.getLargestElf().getIndex();
-        assertEquals(expectedValue, actualValue);
+        int actualElf = advent.getLargestElf().getIndex();
+        assertEquals(expectedElf, actualElf);
     }
 
     @Test
     void testFindBiggestElfAndValue() {
         int expectedIndex = 3;
-        int expectedMaxValue = 120;
+        int expectedTotalCalories = 120;
         Advent01 advent = new Advent01(AdventRunner.TEST);
         Elf largestElf = advent.getLargestElf();
         int actualIndex = largestElf.getIndex();
         int actualMaxValue = largestElf.getValue();
         assertEquals(expectedIndex, actualIndex);
-        assertEquals(expectedMaxValue, actualMaxValue);
+        assertEquals(expectedTotalCalories, actualMaxValue);
     }
 
 }
