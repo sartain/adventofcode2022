@@ -25,7 +25,7 @@ public class Advent01Test {
     void testFindBiggestElf() {
         int expectedElf = 4;
         Advent01 advent = new Advent01(AdventRunner.TEST);
-        int actualElf = advent.getLargestElf().getIndex();
+        int actualElf = advent.getSingleLargestElf().getIndex();
         assertEquals(expectedElf, actualElf);
     }
 
@@ -34,7 +34,7 @@ public class Advent01Test {
         int expectedIndex = 4;
         int expectedTotalCalories = 120;
         Advent01 advent = new Advent01(AdventRunner.TEST);
-        Elf largestElf = advent.getLargestElf();
+        Elf largestElf = advent.getSingleLargestElf();
         int actualIndex = largestElf.getIndex();
         int actualMaxValue = largestElf.getValue();
         assertEquals(expectedIndex, actualIndex);

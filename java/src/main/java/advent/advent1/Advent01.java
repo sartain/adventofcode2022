@@ -28,7 +28,7 @@ public class Advent01 implements Advent {
 
     @Override
     public String partOne() {
-        return String.valueOf(getLargestElf().getValue());
+        return String.valueOf(getSingleLargestElf().getValue());
     }
 
     @Override
@@ -59,8 +59,13 @@ public class Advent01 implements Advent {
     //Retrieve max value out of elf calorie list
     //Return Elf record where max value is present
 
-    public Elf getLargestElf() {
+    public Elf getSingleLargestElf() {
         List<Elf> elfCalorieList = splitElfCalories();
+        int max = elfCalorieList.stream().mapToInt(Elf::getValue).max().orElseThrow(NoSuchElementException::new);
+        return elfCalorieList.stream().filter(e -> e.getValue() == max).distinct().collect(Collectors.toList()).get(0);
+    }
+
+    public Elf getLargestElfGivenList(List<Elf> elfCalorieList) {
         int max = elfCalorieList.stream().mapToInt(Elf::getValue).max().orElseThrow(NoSuchElementException::new);
         return elfCalorieList.stream().filter(e -> e.getValue() == max).distinct().collect(Collectors.toList()).get(0);
     }
@@ -71,18 +76,15 @@ public class Advent01 implements Advent {
 
         try {
             //Get maximum Elf then remove from list
-            int max = elfCalorieList.stream().mapToInt(Elf::getValue).max().orElseThrow(NoSuchElementException::new);
-            Elf largest = elfCalorieList.stream().filter(e -> e.getValue() == max).distinct().collect(Collectors.toList()).get(0);
+            Elf largest = getLargestElfGivenList(elfCalorieList);
             elfCalorieList.remove(largest);
             threeLargestElves.add(largest);
             //Get second maximum
-            int secondMax = elfCalorieList.stream().mapToInt(Elf::getValue).max().orElseThrow(NoSuchElementException::new);
-            Elf secondLargest = elfCalorieList.stream().filter(e -> e.getValue() == secondMax).distinct().collect(Collectors.toList()).get(0);
+            Elf secondLargest = getLargestElfGivenList(elfCalorieList);
             elfCalorieList.remove(secondLargest);
             threeLargestElves.add(secondLargest);
             //Get third maximum
-            int thirdMax = elfCalorieList.stream().mapToInt(Elf::getValue).max().orElseThrow(NoSuchElementException::new);
-            Elf thirdLargest = elfCalorieList.stream().filter(e -> e.getValue() == thirdMax).distinct().collect(Collectors.toList()).get(0);
+            Elf thirdLargest = getLargestElfGivenList(elfCalorieList);
             elfCalorieList.remove(thirdLargest);
             threeLargestElves.add(thirdLargest);
             //Return value
