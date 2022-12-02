@@ -55,4 +55,8 @@ public class Advent02 implements Advent {
     public List<Character> getPlayerOneList() {
         return getPlayerList(true);
     }
+
+    public List<Character> getPlayerTwoList() {
+        return getPlayerList(false);
+    }
 }

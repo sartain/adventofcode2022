@@ -17,4 +17,12 @@ public class Advent02Test {
         assertArrayEquals(expectedPlayerOneList, actualPlayerOneList);
     }
 
+    @Test
+    void testGetPlayerTwoList() {
+        Character[] expectedPlayerTwoList = {'Y','X','Z'};
+        Advent02 advent = new Advent02(AdventRunner.TEST);
+        Character[] actualPlayerTwoList = advent.getPlayerTwoList().toArray(Character[]::new);
+        assertArrayEquals(expectedPlayerTwoList, actualPlayerTwoList);
+    }
+
 }
