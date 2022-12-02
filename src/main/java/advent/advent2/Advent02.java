@@ -40,7 +40,7 @@ public class Advent02 implements Advent {
 
     @Override
     public String partTwo() {
-        return null;
+        return String.valueOf(scorePlayerTwoGamePartTwo());
     }
 
     //Expectation is that round has two char values
