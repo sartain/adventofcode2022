@@ -1,4 +1,4 @@
-package advent.advent2;
+package advent.advent2.scoring;
 
 import advent.advent2.moves.RPSMove;
 import advent.advent2.moves.RPSMoves;

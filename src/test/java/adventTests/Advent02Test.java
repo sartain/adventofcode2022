@@ -1,6 +1,5 @@
 package adventTests;
 
-import advent.Advent;
 import advent.AdventRunner;
 import advent.advent2.Advent02;
 import advent.advent2.moves.RPSMove;

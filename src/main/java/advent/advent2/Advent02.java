@@ -3,6 +3,7 @@ package advent.advent2;
 import advent.Advent;
 import advent.AdventRunner;
 import advent.advent2.moves.RPSMove;
+import advent.advent2.scoring.Scorer;
 import helper.MyFileReader;
 
 import java.util.ArrayList;

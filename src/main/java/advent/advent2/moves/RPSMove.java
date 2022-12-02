@@ -1,6 +1,6 @@
 package advent.advent2.moves;
 
-import advent.advent2.RPSRules;
+import advent.advent2.scoring.RPSRules;
 
 public class RPSMove {
 
