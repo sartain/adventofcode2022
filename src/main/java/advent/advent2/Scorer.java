@@ -1,14 +1,12 @@
 package advent.advent2;
 
+import advent.advent2.moves.RPSMove;
+import advent.advent2.moves.RPSMoves;
+
 public class Scorer {
 
-    public static int getScoreGivenCharacter(char input) {
-        if(input == 'X' || input == 'A')
-            return 1;
-        else if(input == 'Y' || input == 'B')
-            return 2;
-        else
-            return 3;
+    public static int getScoreGivenCharacter(RPSMove move) {
+        return move.getScore();
     }
 
 }

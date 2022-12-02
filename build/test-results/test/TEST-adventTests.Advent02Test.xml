@@ -1,9 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="adventTests.Advent02Test" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-12-02T14:51:52" hostname="Alexs-MacBook-Pro.local" time="0.029">
+<testsuite name="adventTests.Advent02Test" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-12-02T15:21:44" hostname="Alexs-MacBook-Pro.local" time="0.045">
   <properties/>
-  <testcase name="testGetPlayerOneList()" classname="adventTests.Advent02Test" time="0.021"/>
-  <testcase name="testScoreIndividualValues()" classname="adventTests.Advent02Test" time="0.005"/>
-  <testcase name="testGetPlayerTwoList()" classname="adventTests.Advent02Test" time="0.001"/>
-  <system-out><![CDATA[]]></system-out>
+  <testcase name="testGetPlayerOneList()" classname="adventTests.Advent02Test" time="0.04"/>
+  <testcase name="testScoreIndividualValues()" classname="adventTests.Advent02Test" time="0.003"/>
+  <testcase name="testGetPlayerTwoList()" classname="adventTests.Advent02Test" time="0.002"/>
+  <system-out><![CDATA[A
+Y
+B
+X
+C
+Z
+A
+Y
+B
+X
+C
+Z
+A
+Y
+B
+X
+C
+Z
+]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

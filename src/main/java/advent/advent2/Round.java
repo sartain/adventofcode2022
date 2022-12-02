@@ -1,32 +1,28 @@
 package advent.advent2;
 
+import advent.advent2.moves.RPSMove;
+import advent.advent2.moves.RPSMoveFactory;
+import advent.advent2.moves.RPSMoves;
+
 public class Round {
 
-    private Character playerOneMove;
-    private Character playerTwoMove;
+    private final RPSMove playerOneMove;
+    private final RPSMove playerTwoMove;
 
     public Round(String input) {
         int playerOneIndex = 0;
-        this.playerOneMove = input.toCharArray()[playerOneIndex];
+        this.playerOneMove = RPSMoveFactory.createRPSMove(input.toCharArray()[playerOneIndex]);
         int playerTwoIndex = 2;
-        this.playerTwoMove = input.toCharArray()[playerTwoIndex];
+        this.playerTwoMove = RPSMoveFactory.createRPSMove(input.toCharArray()[playerTwoIndex]);
     }
 
-    public Character getPlayerOneMove() {
+    public RPSMove getPlayerOneMove() {
         return playerOneMove;
     }
 
-    public void setPlayerOneMove(Character playerOneMove) {
-        this.playerOneMove = playerOneMove;
-    }
 
-    public Character getPlayerTwoMove() {
+    public RPSMove getPlayerTwoMove() {
         return playerTwoMove;
     }
-
-    public void setPlayerTwoMove(Character playerTwoMove) {
-        this.playerTwoMove = playerTwoMove;
-    }
-
 
 }

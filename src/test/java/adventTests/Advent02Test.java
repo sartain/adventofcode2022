@@ -1,8 +1,9 @@
 package adventTests;
 
-import advent.Advent;
 import advent.AdventRunner;
 import advent.advent2.Advent02;
+import advent.advent2.moves.RPSMove;
+import advent.advent2.moves.RPSMoves;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
@@ -12,17 +13,17 @@ public class Advent02Test {
 
     @Test
     void testGetPlayerOneList() {
-        Character[] expectedPlayerOneList = {'A','B','C'};
+        RPSMoves[] expectedPlayerOneList = {RPSMoves.ROCK, RPSMoves.PAPER, RPSMoves.SCISSORS};
         Advent02 advent = new Advent02(AdventRunner.TEST);
-        Character[] actualPlayerOneList = advent.getPlayerOneList().toArray(Character[]::new);
+        RPSMoves[] actualPlayerOneList = advent.getPlayerOneList().stream().map(RPSMove::getValue).toArray(RPSMoves[]::new);
         assertArrayEquals(expectedPlayerOneList, actualPlayerOneList);
     }
 
     @Test
     void testGetPlayerTwoList() {
-        Character[] expectedPlayerTwoList = {'Y','X','Z'};
+        RPSMoves[] expectedPlayerTwoList = {RPSMoves.PAPER, RPSMoves.ROCK, RPSMoves.SCISSORS};
         Advent02 advent = new Advent02(AdventRunner.TEST);
-        Character[] actualPlayerTwoList = advent.getPlayerTwoList().toArray(Character[]::new);
+        RPSMoves[] actualPlayerTwoList = advent.getPlayerTwoList().stream().map(RPSMove::getValue).toArray(RPSMoves[]::new);
         assertArrayEquals(expectedPlayerTwoList, actualPlayerTwoList);
     }
 
