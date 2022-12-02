@@ -1,5 +1,7 @@
 package advent.advent2.moves;
 
+import advent.advent2.RPSRules;
+
 public class RPSMove {
 
     int score;
@@ -16,11 +18,11 @@ public class RPSMove {
     }
 
     public RPSMoves getWinsAgainst() {
-        return this.winsAgainst;
+        return RPSRules.winsAgainst(this.value);
     }
 
     public RPSMoves getLosesAgainst() {
-        return this.losesAgainst;
+        return RPSRules.losesAgainst(this.value);
     }
 
 }
