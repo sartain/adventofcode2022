@@ -28,12 +28,12 @@ public class Advent01 implements Advent {
 
     @Override
     public String partOne() {
-        return String.valueOf(getLargestElves(1).get(0).getValue());
+        return String.valueOf(getTotalCaloriesFromLargestElves(1));
     }
 
     @Override
     public String partTwo() {
-        return String.valueOf(getLargestElves(3).stream().map(Elf::getValue).reduce(0, Integer::sum));
+        return String.valueOf(getTotalCaloriesFromLargestElves(3));
     }
 
     public List<Elf> splitElfCalories() {
@@ -63,6 +63,10 @@ public class Advent01 implements Advent {
         List<Elf> elfCalorieList = splitElfCalories();
         elfCalorieList.sort(Comparator.comparingInt(Elf::getValue).reversed());
         return elfCalorieList.stream().limit(numberOfElvesToRetrieve).collect(Collectors.toList());
+    }
+
+    public int getTotalCaloriesFromLargestElves(int numberOfElvesToRetrieve) {
+        return getLargestElves(numberOfElvesToRetrieve).stream().map(Elf::getValue).reduce(0, Integer::sum);
     }
 
 }

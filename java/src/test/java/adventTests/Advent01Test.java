@@ -49,4 +49,12 @@ public class Advent01Test {
         assertArrayEquals(expectedTotals, actualTotals);
     }
 
+    @Test
+    void testSumThreeBiggestElves() {
+        int expectedTotalCalories = 330;
+        Advent01 advent = new Advent01(AdventRunner.TEST);
+        int actualTotalCalories = advent.getTotalCaloriesFromLargestElves(3);
+        assertEquals(expectedTotalCalories, actualTotalCalories);
+    }
+
 }
