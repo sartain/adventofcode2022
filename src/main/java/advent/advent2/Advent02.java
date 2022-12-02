@@ -72,14 +72,22 @@ public class Advent02 implements Advent {
         return getPlayerList(false, false);
     }
 
-    public int scorePlayerTwoIndividualValues() {
-        List<RPSMove> playerList = getPlayerTwoList();
+    public int scorePlayerTwoIndividualValues(boolean partOne) {
+        List<RPSMove> playerList;
+        if(partOne)
+            playerList = getPlayerTwoList();
+        else
+            playerList = getPlayerTwoListPartTwo();
         return playerList.stream().map(Scorer::getScoreGivenCharacter).reduce(0, Integer::sum);
     }
 
-    public int scorePlayerTwoRounds() {
+    public int scorePlayerTwoRounds(boolean partOne) {
         List<RPSMove> playerOneList = getPlayerOneList();
-        List<RPSMove> playerTwoList = getPlayerTwoList();
+        List<RPSMove> playerTwoList;
+        if(partOne)
+            playerTwoList = getPlayerTwoList();
+        else
+            playerTwoList = getPlayerTwoListPartTwo();
         int totalScore = 0;
         for(int i = 0; i < playerOneList.size(); i++) {
             totalScore += Scorer.getScoreGivenRound(playerOneList.get(i), playerTwoList.get(i));
@@ -88,7 +96,11 @@ public class Advent02 implements Advent {
     }
 
     public int scorePlayerTwoGame() {
-        return scorePlayerTwoIndividualValues() + scorePlayerTwoRounds();
+        return scorePlayerTwoIndividualValues(true) + scorePlayerTwoRounds(true);
+    }
+
+    public int scorePlayerTwoGamePartTwo() {
+        return scorePlayerTwoIndividualValues(false) + scorePlayerTwoRounds(false);
     }
 
 }

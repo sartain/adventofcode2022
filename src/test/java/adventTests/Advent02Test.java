@@ -29,26 +29,50 @@ public class Advent02Test {
     }
 
     @Test
-    void testScoreIndividualValues() {
+    void testScoreIndividualValuesPartOne() {
         int expectedScore = 6;
         Advent02 advent = new Advent02(AdventRunner.TEST);
-        int actualScore = advent.scorePlayerTwoIndividualValues();
+        int actualScore = advent.scorePlayerTwoIndividualValues(true);
         assertEquals(expectedScore, actualScore);
     }
 
     @Test
-    void testScoreGame() {
+    void testScoreIndividualValuesPartTwo() {
+        int expectedScore = 3;
+        Advent02 advent = new Advent02(AdventRunner.TEST);
+        int actualScore = advent.scorePlayerTwoIndividualValues(false);
+        assertEquals(expectedScore, actualScore);
+    }
+
+    @Test
+    void testScoreGamePartOne() {
         int expectedScore = 9;
         Advent02 advent = new Advent02(AdventRunner.TEST);
-        int actualScore = advent.scorePlayerTwoRounds();
+        int actualScore = advent.scorePlayerTwoRounds(true);
         assertEquals(expectedScore, actualScore);
     }
 
     @Test
-    void testScoreTotalGame() {
+    void testScoreGamePartTwo() {
+        int expectedScore = 9;
+        Advent02 advent = new Advent02(AdventRunner.TEST);
+        int actualScore = advent.scorePlayerTwoRounds(false);
+        assertEquals(expectedScore, actualScore);
+    }
+
+    @Test
+    void testScoreTotalGamePartOne() {
         int expectedScore = 15;
         Advent02 advent = new Advent02(AdventRunner.TEST);
         int actualScore = advent.scorePlayerTwoGame();
+        assertEquals(expectedScore, actualScore);
+    }
+
+    @Test
+    void testScoreTotalGamePartTwo() {
+        int expectedScore = 12;
+        Advent02 advent = new Advent02(AdventRunner.TEST);
+        int actualScore = advent.scorePlayerTwoGamePartTwo();
         assertEquals(expectedScore, actualScore);
     }
 
