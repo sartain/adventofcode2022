@@ -1,6 +1,6 @@
 package advent.advent2.moves;
 
-public enum RPSMoves {
+public enum RPSMoveType {
     ROCK,
     PAPER,
     SCISSORS

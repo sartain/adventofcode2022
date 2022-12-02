@@ -1,7 +1,7 @@
 package advent.advent2.scoring;
 
 import advent.advent2.moves.RPSMove;
-import advent.advent2.moves.RPSMoves;
+import advent.advent2.moves.RPSMoveType;
 
 public class Scorer {
 
@@ -14,8 +14,8 @@ public class Scorer {
     }
 
     public static int getScoreGivenRound(RPSMove playerOne, RPSMove playerTwo) {
-        RPSMoves playerOneMove = playerOne.getValue();
-        RPSMoves playerTwoMove = playerTwo.getValue();
+        RPSMoveType playerOneMove = playerOne.getValue();
+        RPSMoveType playerTwoMove = playerTwo.getValue();
         if(playerOneMove.equals(playerTwoMove)) {
             return pointsForDraw;
         }

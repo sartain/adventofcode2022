@@ -5,7 +5,7 @@ public class Scissors extends RPSMove {
     public Scissors() {
         super();
         this.score = 3;
-        this.value = RPSMoves.SCISSORS;
+        this.value = RPSMoveType.SCISSORS;
     }
 
 }

@@ -2,7 +2,7 @@ package advent.advent2.moves;
 
 public class RPSMoveFactory {
 
-    public static RPSMove createRPSMoveGivenEnum(RPSMoves value) {
+    public static RPSMove createRPSMoveGivenEnum(RPSMoveType value) {
         switch(value) {
             case ROCK:
                 return new Rock();

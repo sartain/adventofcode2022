@@ -5,21 +5,21 @@ import advent.advent2.scoring.RPSRules;
 public class RPSMove {
 
     int score;
-    RPSMoves value;
+    RPSMoveType value;
 
     public int getScore() {
         return this.score;
     }
 
-    public RPSMoves getValue() {
+    public RPSMoveType getValue() {
         return this.value;
     }
 
-    public RPSMoves getWinsAgainst() {
+    public RPSMoveType getWinsAgainst() {
         return RPSRules.winsAgainst(this.value);
     }
 
-    public RPSMoves getLosesAgainst() {
+    public RPSMoveType getLosesAgainst() {
         return RPSRules.losesAgainst(this.value);
     }
 

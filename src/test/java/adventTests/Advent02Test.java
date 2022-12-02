@@ -3,7 +3,7 @@ package adventTests;
 import advent.AdventRunner;
 import advent.advent2.Advent02;
 import advent.advent2.moves.RPSMove;
-import advent.advent2.moves.RPSMoves;
+import advent.advent2.moves.RPSMoveType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
@@ -13,17 +13,17 @@ public class Advent02Test {
 
     @Test
     void testGetPlayerOneList() {
-        RPSMoves[] expectedPlayerOneList = {RPSMoves.ROCK, RPSMoves.PAPER, RPSMoves.SCISSORS};
+        RPSMoveType[] expectedPlayerOneList = {RPSMoveType.ROCK, RPSMoveType.PAPER, RPSMoveType.SCISSORS};
         Advent02 advent = new Advent02(AdventRunner.TEST);
-        RPSMoves[] actualPlayerOneList = advent.getPlayerOneList().stream().map(RPSMove::getValue).toArray(RPSMoves[]::new);
+        RPSMoveType[] actualPlayerOneList = advent.getPlayerOneList().stream().map(RPSMove::getValue).toArray(RPSMoveType[]::new);
         assertArrayEquals(expectedPlayerOneList, actualPlayerOneList);
     }
 
     @Test
     void testGetPlayerTwoList() {
-        RPSMoves[] expectedPlayerTwoList = {RPSMoves.PAPER, RPSMoves.ROCK, RPSMoves.SCISSORS};
+        RPSMoveType[] expectedPlayerTwoList = {RPSMoveType.PAPER, RPSMoveType.ROCK, RPSMoveType.SCISSORS};
         Advent02 advent = new Advent02(AdventRunner.TEST);
-        RPSMoves[] actualPlayerTwoList = advent.getPlayerTwoList().stream().map(RPSMove::getValue).toArray(RPSMoves[]::new);
+        RPSMoveType[] actualPlayerTwoList = advent.getPlayerTwoList().stream().map(RPSMove::getValue).toArray(RPSMoveType[]::new);
         assertArrayEquals(expectedPlayerTwoList, actualPlayerTwoList);
     }
 
@@ -77,9 +77,9 @@ public class Advent02Test {
 
     @Test
     void testGetPlayerTwoListPartTwo() {
-        RPSMoves[] expectedPlayerTwoList = {RPSMoves.ROCK, RPSMoves.ROCK, RPSMoves.ROCK};
+        RPSMoveType[] expectedPlayerTwoList = {RPSMoveType.ROCK, RPSMoveType.ROCK, RPSMoveType.ROCK};
         Advent02 advent = new Advent02(AdventRunner.TEST);
-        RPSMoves[] actualPlayerTwoList = advent.getPlayerTwoListPartTwo().stream().map(RPSMove::getValue).toArray(RPSMoves[]::new);
+        RPSMoveType[] actualPlayerTwoList = advent.getPlayerTwoListPartTwo().stream().map(RPSMove::getValue).toArray(RPSMoveType[]::new);
         assertArrayEquals(expectedPlayerTwoList, actualPlayerTwoList);
     }
 
