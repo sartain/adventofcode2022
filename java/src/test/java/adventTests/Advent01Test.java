@@ -15,16 +15,15 @@ public class Advent01Test {
 
     @Test
     void testSplitElfValueIntoTotal() {
-        Integer[] expectedTotals = {100, 110, 120};
+        Integer[] expectedTotals = {100, 3, 110, 120, 7, 26};
         Advent01 advent = new Advent01(AdventRunner.TEST);
-        Elf[] actualTotals = advent.splitElfCalories().toArray(Elf[]::new);
-        Integer[] elfMaxValues = Arrays.stream(actualTotals).map(Elf::getValue).toArray(Integer[]::new);
+        Integer[] elfMaxValues = advent.splitElfCalories().stream().map(Elf::getValue).toArray(Integer[]::new);
         assertArrayEquals(expectedTotals, elfMaxValues);
     }
 
     @Test
     void testFindBiggestElf() {
-        int expectedElf = 3;
+        int expectedElf = 4;
         Advent01 advent = new Advent01(AdventRunner.TEST);
         int actualElf = advent.getLargestElf().getIndex();
         assertEquals(expectedElf, actualElf);
@@ -32,7 +31,7 @@ public class Advent01Test {
 
     @Test
     void testFindBiggestElfAndValue() {
-        int expectedIndex = 3;
+        int expectedIndex = 4;
         int expectedTotalCalories = 120;
         Advent01 advent = new Advent01(AdventRunner.TEST);
         Elf largestElf = advent.getLargestElf();
@@ -40,6 +39,14 @@ public class Advent01Test {
         int actualMaxValue = largestElf.getValue();
         assertEquals(expectedIndex, actualIndex);
         assertEquals(expectedTotalCalories, actualMaxValue);
+    }
+
+    @Test
+    void testFindThreeBiggestElves() {
+        Integer[] expectedTotals = {100, 110, 120};
+        Advent01 advent = new Advent01(AdventRunner.TEST);
+        Integer[] actualTotals = advent.getThreeLargestElves().stream().map(Elf::getValue).toArray(Integer[]::new);
+        assertArrayEquals(expectedTotals, actualTotals);
     }
 
 }
