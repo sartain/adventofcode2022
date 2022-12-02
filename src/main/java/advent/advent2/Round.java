@@ -2,6 +2,16 @@ package advent.advent2;
 
 public class Round {
 
+    private Character playerOneMove;
+    private Character playerTwoMove;
+
+    public Round(String input) {
+        int playerOneIndex = 0;
+        this.playerOneMove = input.toCharArray()[playerOneIndex];
+        int playerTwoIndex = 2;
+        this.playerTwoMove = input.toCharArray()[playerTwoIndex];
+    }
+
     public Character getPlayerOneMove() {
         return playerOneMove;
     }
@@ -18,12 +28,5 @@ public class Round {
         this.playerTwoMove = playerTwoMove;
     }
 
-    private Character playerOneMove;
-    private Character playerTwoMove;
-
-    public Round(String input) {
-        this.playerOneMove = input.toCharArray()[0];
-        this.playerTwoMove = input.toCharArray()[2];
-    }
 
 }
