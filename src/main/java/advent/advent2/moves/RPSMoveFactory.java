@@ -3,7 +3,6 @@ package advent.advent2.moves;
 public class RPSMoveFactory {
 
     public static RPSMove createRPSMove(char input) {
-        System.out.println(input);
         switch(input) {
             case 'X':
             case 'A':

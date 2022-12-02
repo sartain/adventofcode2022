@@ -14,8 +14,14 @@ import java.util.stream.Stream;
 public class Advent02 implements Advent {
 
     private Stream<String> fileLines;
+    private AdventRunner adventRunner;
 
     public Advent02(AdventRunner value) {
+        this.adventRunner = value;
+        readFile(this.adventRunner);
+    }
+
+    public void readFile(AdventRunner value) {
         switch(value) {
             case TEST:
                 fileLines = MyFileReader.fileToStringStream("TestAdvent02");
@@ -41,6 +47,7 @@ public class Advent02 implements Advent {
     //Expectation is that round has two char values
 
     public List<RPSMove> getPlayerList(boolean firstPlayer) {
+        readFile(this.adventRunner);
         List<String> rpsRounds = fileLines.collect(Collectors.toList());
         List<RPSMove> playerMoveList = new ArrayList<>();
         for(String roundString : rpsRounds) {
@@ -64,6 +71,16 @@ public class Advent02 implements Advent {
     public int scorePlayerTwoIndividualValues() {
         List<RPSMove> playerList = getPlayerTwoList();
         return playerList.stream().map(Scorer::getScoreGivenCharacter).reduce(0, Integer::sum);
+    }
+
+    public int scorePlayerTwoRounds() {
+        List<RPSMove> playerOneList = getPlayerOneList();
+        List<RPSMove> playerTwoList = getPlayerTwoList();
+        int totalScore = 0;
+        for(int i = 0; i < playerOneList.size(); i++) {
+            totalScore += Scorer.getScoreGivenRound(playerOneList.get(i), playerTwoList.get(i));
+        }
+        return totalScore;
     }
 
 }
