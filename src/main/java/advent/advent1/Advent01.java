@@ -1,6 +1,7 @@
 package advent.advent1;
 
 import advent.Advent;
+import advent.Advent00;
 import advent.AdventRunner;
 import helper.MyFileReader;
 
@@ -9,21 +10,14 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class Advent01 implements Advent {
+public class Advent01 extends Advent00 implements Advent  {
 
-    private Stream<String> fileLines;
+    private final AdventRunner adventRunner;
+    private static Stream<String> fileLines;
 
     public Advent01(AdventRunner value) {
-        switch(value) {
-            case TEST:
-                fileLines = MyFileReader.fileToStringStream("TestAdvent01");
-                break;
-            case LIVE:
-                fileLines = MyFileReader.fileToStringStream("Advent01");
-                break;
-            default:
-                break;
-        }
+        this.adventRunner = value;
+        fileLines = super.readFile("Advent01", value);
     }
 
     @Override
@@ -33,6 +27,7 @@ public class Advent01 implements Advent {
 
     @Override
     public String partTwo() {
+        fileLines = super.readFile("Advent01", this.adventRunner);
         return String.valueOf(getTotalCaloriesFromLargestElves(3));
     }
 

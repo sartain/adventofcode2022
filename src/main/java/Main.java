@@ -8,19 +8,25 @@ import java.io.FileNotFoundException;
 
 public class Main {
 
+    private static final Advent[] advents = {
+            new Advent01(AdventRunner.LIVE),
+            new Advent02(AdventRunner.LIVE),
+            new Advent03(AdventRunner.LIVE)
+    };
+
     public static void main(String[] args) throws FileNotFoundException {
-        Advent advent = new Advent01(AdventRunner.LIVE);
-        System.out.println(advent.partOne());
-        advent = new Advent01(AdventRunner.LIVE);
-        System.out.println(advent.partTwo());
-        advent = new Advent02(AdventRunner.LIVE);
-        System.out.println(advent.partOne());
-        advent = new Advent02(AdventRunner.LIVE);
-        System.out.println(advent.partTwo());
-        advent = new Advent03(AdventRunner.LIVE);
-        System.out.println(advent.partOne());
-        advent = new Advent03(AdventRunner.LIVE);
-        System.out.println(advent.partTwo());
+        for(Advent advent : advents) {
+            System.out.println(
+                    advent.getClass().getName() +
+                    " Part One = " +
+                    advent.partOne());
+            System.out.println(
+                    advent.getClass().getName() +
+                    " Part Two = " +
+                    advent.partTwo());
+        }
     }
+
+
 
 }

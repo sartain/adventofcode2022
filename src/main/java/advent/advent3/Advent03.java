@@ -1,6 +1,7 @@
 package advent.advent3;
 
 import advent.Advent;
+import advent.Advent00;
 import advent.AdventRunner;
 import helper.MyFileReader;
 
@@ -9,15 +10,15 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class Advent03 implements Advent {
+public class Advent03 extends Advent00 implements Advent {
 
-    private Stream<String> fileLines;
     private AdventRunner adventRunner;
+    private Stream<String> fileLines;
     private final char[] characterValues = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ".toCharArray();
 
     public Advent03(AdventRunner value) {
         this.adventRunner = value;
-        readFile(this.adventRunner);
+        fileLines = super.readFile("Advent03", value);
     }
 
     @Override
@@ -27,20 +28,8 @@ public class Advent03 implements Advent {
 
     @Override
     public String partTwo() {
+        fileLines = super.readFile("Advent03", this.adventRunner);
         return String.valueOf(findTotalValuePartTwo());
-    }
-
-    public void readFile(AdventRunner value) {
-        switch(value) {
-            case TEST:
-                fileLines = MyFileReader.fileToStringStream("TestAdvent03");
-                break;
-            case LIVE:
-                fileLines = MyFileReader.fileToStringStream("Advent03");
-                break;
-            default:
-                break;
-        }
     }
 
     public char findMatchingItemGivenGroup(String[] group) {
