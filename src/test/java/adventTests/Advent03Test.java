@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class Advent03Test {
 
@@ -28,5 +29,13 @@ public class Advent03Test {
         String[] actualMatchingItems = advent.findMatchingItems(compartments).toArray(String[]::new);
         String[] expectedMatchingItems = {"p"};
         assertArrayEquals(expectedMatchingItems, actualMatchingItems);
+    }
+
+    @Test
+    void findValueOfItemGivenValue() {
+        Advent03 advent = new Advent03();
+        int actualValue = advent.findValueGivenInput('p');
+        int expectedValue = 16;
+        assertEquals(expectedValue, actualValue);
     }
 }

@@ -7,6 +7,7 @@ import java.util.List;
 
 public class Advent03 implements Advent {
 
+    private char[] characterValues = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ".toCharArray();
 
     @Override
     public String partOne() {
@@ -46,6 +47,15 @@ public class Advent03 implements Advent {
         }
         //return matches
         return matches;
+    }
+
+    public int findValueGivenInput(char input) {
+        for(int i = 0; i< characterValues.length; i++) {
+            if(input == characterValues[i]) {
+                return i+1;
+            }
+        }
+        return 0;
     }
 
 }
