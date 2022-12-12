@@ -43,25 +43,6 @@ public class Advent03 implements Advent {
         }
     }
 
-    public List<String[]> splitGroups() {
-        //Initialize variables
-        int groupSize = 3;
-        List<String[]> groups = new ArrayList<>();
-        List<String> input = fileLines.collect(Collectors.toList());
-        int counter = 1;
-        List<String> group = new ArrayList<>();
-        //Add to group
-        for(String inputString : input) {
-            group.add(inputString);
-            if(counter % groupSize == 0) {
-                groups.add(group.toArray(String[]::new));
-                group = new ArrayList<>();
-            }
-            counter += 1;
-        }
-        return groups;
-    }
-
     public char findMatchingItemGivenGroup(String[] group) {
         char[] memberOne = group[0].toCharArray();
         char[] memberTwo = group[1].toCharArray();
@@ -89,6 +70,11 @@ public class Advent03 implements Advent {
         return fileLines.map(this::splitCompartment).map(this::findTotalValueGivenCompartments).reduce(0, Integer::sum);
     }
 
+    public int findTotalValuePartTwo() {
+        List<String[]> groups = this.splitGroups();
+        return groups.stream().map(this::findMatchingItemGivenGroup).map(this::findValueGivenInput).reduce(0, Integer::sum);
+    }
+
     public List<char[]> splitCompartment(String input) {
         //Retrieve input string indexes
         int inputLength = input.length();
@@ -101,6 +87,25 @@ public class Advent03 implements Advent {
         listToReturn.add(compartmentOne.toCharArray());
         listToReturn.add(compartmentTwo.toCharArray());
         return listToReturn;
+    }
+
+    public List<String[]> splitGroups() {
+        //Initialize variables
+        int groupSize = 3;
+        List<String[]> groups = new ArrayList<>();
+        List<String> input = fileLines.collect(Collectors.toList());
+        int counter = 1;
+        List<String> group = new ArrayList<>();
+        //Add to group
+        for(String inputString : input) {
+            group.add(inputString);
+            if(counter % groupSize == 0) {
+                groups.add(group.toArray(String[]::new));
+                group = new ArrayList<>();
+            }
+            counter += 1;
+        }
+        return groups;
     }
 
     public List<String> findMatchingItems(List<char[]> compartments) {

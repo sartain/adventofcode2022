@@ -59,7 +59,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
-  <component name="RunManager" selected="Gradle.Advent03Test.splitGroups">
+  <component name="RunManager" selected="Gradle.Advent03Test">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="java.main" />
@@ -113,7 +113,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="Advent03Test.findItemsInBothCompartmentsTwo" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Advent03Test.findMatchingItemForGroup" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -126,7 +126,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;adventTests.Advent03Test.findItemsInBothCompartmentsTwo&quot;" />
+            <option value="&quot;adventTests.Advent03Test.findMatchingItemForGroup&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -161,11 +161,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Advent03Test" />
+        <item itemvalue="Gradle.Advent03Test.findMatchingItemForGroup" />
         <item itemvalue="Gradle.Advent03Test.splitGroups" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Gradle.Advent03Test" />
         <item itemvalue="Gradle.Advent02Test" />
-        <item itemvalue="Gradle.Advent03Test.findItemsInBothCompartmentsTwo" />
       </list>
     </recent_temporary>
   </component>

@@ -106,4 +106,12 @@ public class Advent03Test {
         char expectedMatchingItem = 'r';
         assertEquals(expectedMatchingItem, actualMatchingItem);
     }
+
+    @Test
+    void calculateFinalValueGivenFileInputPartTwo() {
+        Advent03 advent = new Advent03(AdventRunner.TEST);
+        int actualValue = advent.findTotalValuePartTwo();
+        int expectedValue = 70;
+        assertEquals(expectedValue, actualValue);
+    }
 }
