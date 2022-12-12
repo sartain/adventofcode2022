@@ -19,6 +19,8 @@ public class Main {
         System.out.println(advent.partTwo());
         advent = new Advent03(AdventRunner.LIVE);
         System.out.println(advent.partOne());
+        advent = new Advent03(AdventRunner.LIVE);
+        System.out.println(advent.partTwo());
     }
 
 }

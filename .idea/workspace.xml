@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="10cb9e56-377a-42a4-9dfa-77054636a09f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/advent/advent3/Advent03.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/advent/advent3/Advent03.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/adventTests/Advent03Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/adventTests/Advent03Test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,36 +59,13 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
-  <component name="RunManager" selected="Gradle.Advent03Test">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="java.main" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration name="Advent02Test" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;adventTests.Advent02Test&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
     </configuration>
     <configuration name="Advent03Test" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -104,6 +81,29 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;adventTests.Advent03Test&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Advent03Test.calculateFinalValueGivenFileInputPartTwo" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;adventTests.Advent03Test.calculateFinalValueGivenFileInputPartTwo&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -162,10 +162,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.Advent03Test" />
+        <item itemvalue="Gradle.Advent03Test.calculateFinalValueGivenFileInputPartTwo" />
         <item itemvalue="Gradle.Advent03Test.findMatchingItemForGroup" />
         <item itemvalue="Gradle.Advent03Test.splitGroups" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Gradle.Advent02Test" />
       </list>
     </recent_temporary>
   </component>

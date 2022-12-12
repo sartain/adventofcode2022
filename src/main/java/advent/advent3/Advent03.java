@@ -27,7 +27,7 @@ public class Advent03 implements Advent {
 
     @Override
     public String partTwo() {
-        return null;
+        return String.valueOf(findTotalValuePartTwo());
     }
 
     public void readFile(AdventRunner value) {
