@@ -6,6 +6,7 @@ import helper.MyFileReader;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Advent03 implements Advent {
@@ -32,14 +33,18 @@ public class Advent03 implements Advent {
     public void readFile(AdventRunner value) {
         switch(value) {
             case TEST:
-                fileLines = MyFileReader.fileToStringStream("TestAdvent02");
+                fileLines = MyFileReader.fileToStringStream("TestAdvent03");
                 break;
             case LIVE:
-                fileLines = MyFileReader.fileToStringStream("Advent02");
+                fileLines = MyFileReader.fileToStringStream("Advent03");
                 break;
             default:
                 break;
         }
+    }
+
+    public int findTotalValue() {
+        return fileLines.map(this::splitCompartment).map(this::findTotalValueGivenCompartments).reduce(0, Integer::sum);
     }
 
     public List<char[]> splitCompartment(String input) {
@@ -65,7 +70,8 @@ public class Advent03 implements Advent {
         for(char compartmentOneValue : compartmentOne) {
             for(char compartmentTwoValue : compartmentTwo) {
                 if(compartmentOneValue == compartmentTwoValue)
-                    matches.add(String.valueOf(compartmentOneValue));
+                    if(!matches.contains(String.valueOf(compartmentOneValue)))
+                        matches.add(String.valueOf(compartmentOneValue));
             }
         }
         //return matches
@@ -85,15 +91,20 @@ public class Advent03 implements Advent {
         //Split compartments
         char[] compartmentOne = compartments.get(0);
         char[] compartmentTwo = compartments.get(1);
+        List<String> matches = new ArrayList<>();
         int total = 0;
         //Find matches
         for(char compartmentOneValue : compartmentOne) {
             for(char compartmentTwoValue : compartmentTwo) {
-                if(compartmentOneValue == compartmentTwoValue)
-                    total += findValueGivenInput(compartmentOneValue);
+                if(compartmentOneValue == compartmentTwoValue) {
+                    //This line avoids duplicate matches
+                    if (!matches.contains(String.valueOf(compartmentOneValue))) {
+                        total += findValueGivenInput(compartmentOneValue);
+                        matches.add(String.valueOf(compartmentOneValue));
+                    }
+                }
             }
         }
-        //return matches
         return total;
     }
 

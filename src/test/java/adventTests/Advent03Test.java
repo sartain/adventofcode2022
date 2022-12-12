@@ -4,6 +4,7 @@ import advent.AdventRunner;
 import advent.advent3.Advent03;
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
@@ -33,6 +34,15 @@ public class Advent03Test {
     }
 
     @Test
+    void findItemsInBothCompartmentsTwo() {
+        Advent03 advent = new Advent03(AdventRunner.TEST);
+        List<char[]> compartments = advent.splitCompartment("jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL");
+        String[] actualMatchingItems = advent.findMatchingItems(compartments).toArray(String[]::new);
+        String[] expectedMatchingItems = {"L"};
+        assertArrayEquals(expectedMatchingItems, actualMatchingItems);
+    }
+
+    @Test
     void findValueOfItemGivenValue() {
         Advent03 advent = new Advent03(AdventRunner.TEST);
         int actualValue = advent.findValueGivenInput('p');
@@ -46,6 +56,23 @@ public class Advent03Test {
         List<char[]> compartments = advent.splitCompartment("vJrwpWtwJgWrhcsFMMfFFhFp");
         int actualValue = advent.findTotalValueGivenCompartments(compartments);
         int expectedValue = 16;
+        assertEquals(expectedValue, actualValue);
+    }
+
+    @Test
+    void findTotalValueGivenInputTwo() {
+        Advent03 advent = new Advent03(AdventRunner.TEST);
+        List<char[]> compartments = advent.splitCompartment("jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL");
+        int actualValue = advent.findTotalValueGivenCompartments(compartments);
+        int expectedValue = 38;
+        assertEquals(expectedValue, actualValue);
+    }
+
+    @Test
+    void calculateFinalValueGivenFileInput() {
+        Advent03 advent = new Advent03(AdventRunner.TEST);
+        int actualValue = advent.findTotalValue();
+        int expectedValue = 157;
         assertEquals(expectedValue, actualValue);
     }
 }
