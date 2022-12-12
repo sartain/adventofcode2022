@@ -2,7 +2,6 @@ package advent.advent3;
 
 import advent.Advent;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,4 +31,21 @@ public class Advent03 implements Advent {
         listToReturn.add(compartmentTwo.toCharArray());
         return listToReturn;
     }
+
+    public List<String> findMatchingItems(List<char[]> compartments) {
+        //Split compartments
+        char[] compartmentOne = compartments.get(0);
+        char[] compartmentTwo = compartments.get(1);
+        List<String> matches = new ArrayList<>();
+        //Find matches
+        for(char compartmentOneValue : compartmentOne) {
+            for(char compartmentTwoValue : compartmentTwo) {
+                if(compartmentOneValue == compartmentTwoValue)
+                    matches.add(String.valueOf(compartmentOneValue));
+            }
+        }
+        //return matches
+        return matches;
+    }
+
 }

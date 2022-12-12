@@ -20,4 +20,13 @@ public class Advent03Test {
         assertArrayEquals(expectedCompartmentOne, actualCompartmentOne);
         assertArrayEquals(expectedCompartmentTwo, actualCompartmentTwo);
     }
+
+    @Test
+    void findItemsInBothCompartments() {
+        Advent03 advent = new Advent03();
+        List<char[]> compartments = advent.splitCompartment("vJrwpWtwJgWrhcsFMMfFFhFp");
+        String[] actualMatchingItems = advent.findMatchingItems(compartments).toArray(String[]::new);
+        String[] expectedMatchingItems = {"p"};
+        assertArrayEquals(expectedMatchingItems, actualMatchingItems);
+    }
 }
