@@ -1,13 +1,23 @@
 package advent.advent3;
 
 import advent.Advent;
+import advent.AdventRunner;
+import helper.MyFileReader;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Stream;
 
 public class Advent03 implements Advent {
 
-    private char[] characterValues = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ".toCharArray();
+    private Stream<String> fileLines;
+    private AdventRunner adventRunner;
+    private final char[] characterValues = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ".toCharArray();
+
+    public Advent03(AdventRunner value) {
+        this.adventRunner = value;
+        readFile(this.adventRunner);
+    }
 
     @Override
     public String partOne() {
@@ -17,6 +27,19 @@ public class Advent03 implements Advent {
     @Override
     public String partTwo() {
         return null;
+    }
+
+    public void readFile(AdventRunner value) {
+        switch(value) {
+            case TEST:
+                fileLines = MyFileReader.fileToStringStream("TestAdvent02");
+                break;
+            case LIVE:
+                fileLines = MyFileReader.fileToStringStream("Advent02");
+                break;
+            default:
+                break;
+        }
     }
 
     public List<char[]> splitCompartment(String input) {
