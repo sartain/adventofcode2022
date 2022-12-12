@@ -22,7 +22,7 @@ public class Advent03 implements Advent {
 
     @Override
     public String partOne() {
-        return null;
+        return String.valueOf(findTotalValue());
     }
 
     @Override
