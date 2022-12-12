@@ -6,16 +6,27 @@ import java.util.stream.Stream;
 
 public class Advent00 {
 
-    public Stream<String> readFile(String className, AdventRunner value) {
-        switch(value) {
+    protected AdventRunner adventRunner;
+    protected Stream<String> fileLines;
+    private final String className;
+
+    public Advent00(AdventRunner value, String className) {
+        this.adventRunner = value;
+        this.className = className;
+        this.readFile();
+    }
+
+    public void readFile() {
+        switch(this.adventRunner) {
             case TEST:
-                return MyFileReader.fileToStringStream("Test" + className);
+                fileLines = MyFileReader.fileToStringStream("Test" + className);
+                break;
             case LIVE:
-                return MyFileReader.fileToStringStream(className);
+                fileLines = MyFileReader.fileToStringStream(className);
+                break;
             default:
                 break;
         }
-        return null;
     }
 
 }

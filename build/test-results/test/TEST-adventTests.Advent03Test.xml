@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="adventTests.Advent03Test" tests="10" skipped="0" failures="0" errors="0" timestamp="2022-12-12T13:02:31" hostname="Alexs-MacBook-Pro.local" time="0.031">
+<testsuite name="adventTests.Advent03Test" tests="10" skipped="0" failures="0" errors="0" timestamp="2022-12-12T16:14:50" hostname="Alexs-MacBook-Pro.local" time="0.011">
   <properties/>
-  <testcase name="calculateFinalValueGivenFileInputPartTwo()" classname="adventTests.Advent03Test" time="0.021"/>
+  <testcase name="calculateFinalValueGivenFileInputPartTwo()" classname="adventTests.Advent03Test" time="0.003"/>
   <testcase name="splitCompartments()" classname="adventTests.Advent03Test" time="0.001"/>
   <testcase name="findTotalValueGivenInputTwo()" classname="adventTests.Advent03Test" time="0.001"/>
   <testcase name="findItemsInBothCompartmentsTwo()" classname="adventTests.Advent03Test" time="0.001"/>
-  <testcase name="findItemsInBothCompartments()" classname="adventTests.Advent03Test" time="0.0"/>
+  <testcase name="findItemsInBothCompartments()" classname="adventTests.Advent03Test" time="0.001"/>
   <testcase name="calculateFinalValueGivenFileInput()" classname="adventTests.Advent03Test" time="0.001"/>
-  <testcase name="findMatchingItemForGroup()" classname="adventTests.Advent03Test" time="0.001"/>
+  <testcase name="findMatchingItemForGroup()" classname="adventTests.Advent03Test" time="0.0"/>
   <testcase name="findTotalValueGivenInput()" classname="adventTests.Advent03Test" time="0.001"/>
-  <testcase name="findValueOfItemGivenValue()" classname="adventTests.Advent03Test" time="0.0"/>
+  <testcase name="findValueOfItemGivenValue()" classname="adventTests.Advent03Test" time="0.001"/>
   <testcase name="splitGroups()" classname="adventTests.Advent03Test" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

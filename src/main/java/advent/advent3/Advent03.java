@@ -3,22 +3,17 @@ package advent.advent3;
 import advent.Advent;
 import advent.Advent00;
 import advent.AdventRunner;
-import helper.MyFileReader;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class Advent03 extends Advent00 implements Advent {
 
-    private AdventRunner adventRunner;
-    private Stream<String> fileLines;
     private final char[] characterValues = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ".toCharArray();
 
     public Advent03(AdventRunner value) {
-        this.adventRunner = value;
-        fileLines = super.readFile("Advent03", value);
+        super(value, "Advent03");
     }
 
     @Override
@@ -28,7 +23,7 @@ public class Advent03 extends Advent00 implements Advent {
 
     @Override
     public String partTwo() {
-        fileLines = super.readFile("Advent03", this.adventRunner);
+        super.readFile();
         return String.valueOf(findTotalValuePartTwo());
     }
 

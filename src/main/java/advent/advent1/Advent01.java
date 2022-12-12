@@ -3,21 +3,14 @@ package advent.advent1;
 import advent.Advent;
 import advent.Advent00;
 import advent.AdventRunner;
-import helper.MyFileReader;
 
-import java.lang.reflect.Array;
 import java.util.*;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class Advent01 extends Advent00 implements Advent  {
 
-    private final AdventRunner adventRunner;
-    private static Stream<String> fileLines;
-
     public Advent01(AdventRunner value) {
-        this.adventRunner = value;
-        fileLines = super.readFile("Advent01", value);
+        super(value, "Advent01");
     }
 
     @Override
@@ -27,7 +20,7 @@ public class Advent01 extends Advent00 implements Advent  {
 
     @Override
     public String partTwo() {
-        fileLines = super.readFile("Advent01", this.adventRunner);
+        super.readFile();
         return String.valueOf(getTotalCaloriesFromLargestElves(3));
     }
 

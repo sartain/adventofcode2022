@@ -5,21 +5,15 @@ import advent.Advent00;
 import advent.AdventRunner;
 import advent.advent2.moves.RPSMove;
 import advent.advent2.scoring.Scorer;
-import helper.MyFileReader;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class Advent02 extends Advent00 implements Advent {
 
-    private Stream<String> fileLines;
-    private final AdventRunner adventRunner;
-
     public Advent02(AdventRunner value) {
-        this.adventRunner = value;
-        fileLines = super.readFile("Advent02", value);
+        super(value, "Advent02");
     }
 
     @Override
@@ -29,7 +23,7 @@ public class Advent02 extends Advent00 implements Advent {
 
     @Override
     public String partTwo() {
-        fileLines = super.readFile("Advent02", this.adventRunner);
+        super.readFile();
         return String.valueOf(scorePlayerTwoGamePartTwo());
     }
 
@@ -37,7 +31,7 @@ public class Advent02 extends Advent00 implements Advent {
 
 
     public List<RPSMove> getPlayerList(boolean firstPlayer, boolean partOne) {
-        fileLines = super.readFile("Advent02", this.adventRunner);
+        super.readFile();
         List<String> rpsRounds = fileLines.collect(Collectors.toList());
         List<RPSMove> playerMoveList = new ArrayList<>();
         for(String roundString : rpsRounds) {
