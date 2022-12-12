@@ -58,4 +58,20 @@ public class Advent03 implements Advent {
         return 0;
     }
 
+    public int findTotalValueGivenCompartments(List<char[]> compartments) {
+        //Split compartments
+        char[] compartmentOne = compartments.get(0);
+        char[] compartmentTwo = compartments.get(1);
+        int total = 0;
+        //Find matches
+        for(char compartmentOneValue : compartmentOne) {
+            for(char compartmentTwoValue : compartmentTwo) {
+                if(compartmentOneValue == compartmentTwoValue)
+                    total += findValueGivenInput(compartmentOneValue);
+            }
+        }
+        //return matches
+        return total;
+    }
+
 }

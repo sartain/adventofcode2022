@@ -38,4 +38,13 @@ public class Advent03Test {
         int expectedValue = 16;
         assertEquals(expectedValue, actualValue);
     }
+
+    @Test
+    void findTotalValueGivenInput() {
+        Advent03 advent = new Advent03();
+        List<char[]> compartments = advent.splitCompartment("vJrwpWtwJgWrhcsFMMfFFhFp");
+        int actualValue = advent.findTotalValueGivenCompartments(compartments);
+        int expectedValue = 16;
+        assertEquals(expectedValue, actualValue);
+    }
 }
