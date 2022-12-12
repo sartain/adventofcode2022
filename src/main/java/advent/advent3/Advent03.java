@@ -43,6 +43,25 @@ public class Advent03 implements Advent {
         }
     }
 
+    public List<String[]> splitGroups() {
+        //Initialize variables
+        int groupSize = 3;
+        List<String[]> groups = new ArrayList<>();
+        List<String> input = fileLines.collect(Collectors.toList());
+        int counter = 1;
+        List<String> group = new ArrayList<>();
+        //Add to group
+        for(String inputString : input) {
+            group.add(inputString);
+            if(counter % groupSize == 0) {
+                groups.add(group.toArray(String[]::new));
+                group = new ArrayList<>();
+            }
+            counter += 1;
+        }
+        return groups;
+    }
+
     public int findTotalValue() {
         return fileLines.map(this::splitCompartment).map(this::findTotalValueGivenCompartments).reduce(0, Integer::sum);
     }

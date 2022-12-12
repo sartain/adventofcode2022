@@ -75,4 +75,23 @@ public class Advent03Test {
         int expectedValue = 157;
         assertEquals(expectedValue, actualValue);
     }
+
+    @Test
+    void splitGroups() {
+        Advent03 advent = new Advent03(AdventRunner.TEST);
+        String[] expectedGroupOne = {"vJrwpWtwJgWrhcsFMMfFFhFp",
+                "jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL",
+                "PmmdzqPrVvPwwTWBwg"
+        };
+        String[] expectedGroupTwo = {"wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn",
+                "ttgJtRGJQctTZtZT",
+                "CrZsJsPPZsGzwwsLwLmpwMDw"
+        };
+        //Will use test txt file
+        List<String[]> groups = advent.splitGroups();
+        String[] actualGroupOne = groups.get(0);
+        String[] actualGroupTwo = groups.get(1);
+        assertArrayEquals(expectedGroupOne, actualGroupOne);
+        assertArrayEquals(expectedGroupTwo, actualGroupTwo);
+    }
 }
