@@ -94,4 +94,16 @@ public class Advent03Test {
         assertArrayEquals(expectedGroupOne, actualGroupOne);
         assertArrayEquals(expectedGroupTwo, actualGroupTwo);
     }
+
+    @Test
+    void findMatchingItemForGroup() {
+        Advent03 advent = new Advent03(AdventRunner.TEST);
+        String[] group = {"vJrwpWtwJgWrhcsFMMfFFhFp",
+                "jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL",
+                "PmmdzqPrVvPwwTWBwg"
+        };
+        char actualMatchingItem = advent.findMatchingItemGivenGroup(group);
+        char expectedMatchingItem = 'r';
+        assertEquals(expectedMatchingItem, actualMatchingItem);
+    }
 }

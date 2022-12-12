@@ -62,6 +62,29 @@ public class Advent03 implements Advent {
         return groups;
     }
 
+    public char findMatchingItemGivenGroup(String[] group) {
+        char[] memberOne = group[0].toCharArray();
+        char[] memberTwo = group[1].toCharArray();
+        char[] memberThree = group[2].toCharArray();
+        for(char c : memberOne) {
+            if(isCharacterInArray(c, memberTwo)) {
+                if(isCharacterInArray(c, memberThree)) {
+                    return c;
+                }
+            }
+        }
+        return '0';
+    }
+
+    public boolean isCharacterInArray(char charToCheck, char[] arrayToCheck) {
+        for(char c : arrayToCheck) {
+            if(c == charToCheck) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public int findTotalValue() {
         return fileLines.map(this::splitCompartment).map(this::findTotalValueGivenCompartments).reduce(0, Integer::sum);
     }
