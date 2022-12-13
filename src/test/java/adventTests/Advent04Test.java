@@ -22,4 +22,18 @@ public class Advent04Test {
         assertEquals(expectedSectionTwo, actualSectionTwo);
     }
 
+    @Test
+    void falseWhenNotOverlapping() {
+        Advent04 advent = new Advent04(AdventRunner.TEST);
+        boolean expectedOverlap = false;
+        boolean actualOverlap = advent.checkOverlapFromString("2-4,6-8");
+        assertEquals(expectedOverlap, actualOverlap);
+    }
+
+    @Test
+    void trueWhenOverlapping() {
+
+    }
+
+
 }

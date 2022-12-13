@@ -28,4 +28,15 @@ public class Camp {
         this.sectionTwo = new CampSection(splitString[1]);
     }
 
+    public boolean getOverlap() {
+        //2-4 1-6
+        //Lower range has to be above next lower range
+        //Upper range has to be below next upper range
+        return overlaps(sectionOne, sectionTwo) || overlaps(sectionTwo, sectionOne);
+    }
+
+    private boolean overlaps(CampSection sectionA, CampSection sectionB) {
+        return sectionA.getLowerRange() > sectionB.getLowerRange() && sectionA.getLowerRange() < sectionB.getUpperRange();
+    }
+
 }

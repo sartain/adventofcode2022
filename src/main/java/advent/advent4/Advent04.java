@@ -24,4 +24,8 @@ public class Advent04 extends Advent00 implements Advent {
         return new Camp(input);
     }
 
+    public boolean checkOverlapFromString(String input) {
+        return getCampFromString(input).getOverlap();
+    }
+
 }
