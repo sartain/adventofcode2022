@@ -28,12 +28,16 @@ public class Advent04 extends Advent00 implements Advent {
         return getCampFromString(input).getFullyContains();
     }
 
-    public boolean checkOverlaps(String input) {
+    public boolean checkOverlapsFromString(String input) {
         return getCampFromString(input).getOverlaps();
     }
 
     public int getSumOfFullyContains() {
         return (int) fileLines.map(this::checkFullyContainFromString).filter(e -> e).count();
+    }
+
+    public int getSumOfOverlaps() {
+        return (int) fileLines.map(this::checkOverlapsFromString).filter(e -> e).count();
     }
 
 }

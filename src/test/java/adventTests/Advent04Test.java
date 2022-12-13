@@ -58,7 +58,7 @@ public class Advent04Test {
     void trueWhenOverlapping() {
         Advent04 advent = new Advent04(AdventRunner.TEST);
         boolean expectedOverlap = true;
-        boolean actualOverlap = advent.checkOverlaps("1-6,6-10");
+        boolean actualOverlap = advent.checkOverlapsFromString("1-6,6-10");
         assertEquals(expectedOverlap, actualOverlap);
     }
 
@@ -66,17 +66,17 @@ public class Advent04Test {
     void falseWhenNotOverlapping() {
         Advent04 advent = new Advent04(AdventRunner.TEST);
         boolean expectedOverlap = false;
-        boolean actualOverlap = advent.checkOverlaps("1-6,7-10");
+        boolean actualOverlap = advent.checkOverlapsFromString("1-6,7-10");
         assertEquals(expectedOverlap, actualOverlap);
     }
 
-    /*@Test
-    void calculateSumOfNonOverlapping() {
+    @Test
+    void calculateSumOfOverlapping() {
         Advent04 advent = new Advent04(AdventRunner.TEST);
-        int expectedOverlapCount = 2;
-        int actualOverlapCount = advent.getSumOfNonOverlaps();
+        int expectedOverlapCount = 4;
+        int actualOverlapCount = advent.getSumOfOverlaps();
         assertEquals(expectedOverlapCount, actualOverlapCount);
-    }*/
+    }
 
 
 }
