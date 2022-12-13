@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="adventTests.Advent04Test" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-12-13T15:20:33" hostname="Alexs-MacBook-Pro.local" time="0.024">
+<testsuite name="adventTests.Advent04Test" tests="4" skipped="0" failures="0" errors="0" timestamp="2022-12-13T15:22:19" hostname="Alexs-MacBook-Pro.local" time="0.03">
   <properties/>
-  <testcase name="falseWhenNotOverlapping()" classname="adventTests.Advent04Test" time="0.024"/>
+  <testcase name="trueWhenOverlapping()" classname="adventTests.Advent04Test" time="0.027"/>
+  <testcase name="trueWhenOverlappingAlternate()" classname="adventTests.Advent04Test" time="0.001"/>
+  <testcase name="splitPair()" classname="adventTests.Advent04Test" time="0.001"/>
+  <testcase name="falseWhenNotOverlapping()" classname="adventTests.Advent04Test" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -32,7 +32,18 @@ public class Advent04Test {
 
     @Test
     void trueWhenOverlapping() {
+        Advent04 advent = new Advent04(AdventRunner.TEST);
+        boolean expectedOverlap = true;
+        boolean actualOverlap = advent.checkOverlapFromString("1-9,3-4");
+        assertEquals(expectedOverlap, actualOverlap);
+    }
 
+    @Test
+    void trueWhenOverlappingAlternate() {
+        Advent04 advent = new Advent04(AdventRunner.TEST);
+        boolean expectedOverlap = true;
+        boolean actualOverlap = advent.checkOverlapFromString("3-4,1-9");
+        assertEquals(expectedOverlap, actualOverlap);
     }
 
 
