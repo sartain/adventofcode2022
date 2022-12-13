@@ -17,7 +17,8 @@ public class Advent04 extends Advent00 implements Advent {
 
     @Override
     public String partTwo() {
-        return null;
+        super.readFile();
+        return String.valueOf(getSumOfOverlaps());
     }
 
     public Camp getCampFromString(String input) {
