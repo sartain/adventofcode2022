@@ -2,25 +2,8 @@ package advent.advent4;
 
 public class Camp {
 
-    public CampSection getSectionOne() {
-        return sectionOne;
-    }
-
-    public void setSectionOne(CampSection sectionOne) {
-        this.sectionOne = sectionOne;
-    }
-
-    private CampSection sectionOne;
-
-    public CampSection getSectionTwo() {
-        return sectionTwo;
-    }
-
-    public void setSectionTwo(CampSection sectionTwo) {
-        this.sectionTwo = sectionTwo;
-    }
-
-    private CampSection sectionTwo;
+    private final CampSection sectionOne;
+    private final CampSection sectionTwo;
 
     public Camp(String input) {
         String[] splitString = input.split(",");
@@ -28,10 +11,15 @@ public class Camp {
         this.sectionTwo = new CampSection(splitString[1]);
     }
 
+    public CampSection getSectionOne() {
+        return sectionOne;
+    }
+
+    public CampSection getSectionTwo() {
+        return sectionTwo;
+    }
+
     public boolean getFullyContains() {
-        //2-4 1-6
-        //Lower range has to be above next lower range
-        //Upper range has to be below next upper range
         return fullyContains(sectionOne, sectionTwo) || fullyContains(sectionTwo, sectionOne);
     }
 
@@ -40,7 +28,6 @@ public class Camp {
     }
 
     public boolean getOverlaps() {
-        //If one overlaps return true
         return !(doesNotOverlap(sectionOne, sectionTwo) || doesNotOverlap(sectionTwo, sectionOne));
     }
 

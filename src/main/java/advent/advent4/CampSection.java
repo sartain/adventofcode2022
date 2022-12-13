@@ -2,24 +2,16 @@ package advent.advent4;
 
 public class CampSection {
 
+    private final int lowerRange;
+    private final int upperRange;
+
     public int getLowerRange() {
         return lowerRange;
-    }
-
-    public void setLowerRange(int lowerRange) {
-        this.lowerRange = lowerRange;
     }
 
     public int getUpperRange() {
         return upperRange;
     }
-
-    public void setUpperRange(int upperRange) {
-        this.upperRange = upperRange;
-    }
-
-    private int lowerRange;
-    private int upperRange;
 
     public CampSection(String input) {
         String[] splitString = input.split("-");
