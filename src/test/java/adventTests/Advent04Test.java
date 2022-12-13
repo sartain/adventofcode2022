@@ -46,5 +46,13 @@ public class Advent04Test {
         assertEquals(expectedOverlap, actualOverlap);
     }
 
+    @Test
+    void calculateSumOfOverlaps() {
+        Advent04 advent = new Advent04(AdventRunner.TEST);
+        int expectedOverlapCount = 2;
+        int actualOverlapCount = advent.getSumOfOverlaps();
+        assertEquals(expectedOverlapCount, actualOverlapCount);
+    }
+
 
 }

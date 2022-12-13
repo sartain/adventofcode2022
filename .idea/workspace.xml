@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="10cb9e56-377a-42a4-9dfa-77054636a09f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/advent/advent4/Advent04.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/advent/advent4/Advent04.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/adventTests/Advent04Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/adventTests/Advent04Test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +67,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
-  <component name="RunManager" selected="Gradle.Advent04Test.falseWhenNotOverlapping">
+  <component name="RunManager" selected="Gradle.Advent04Test">
     <configuration name="Advent03Test" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -184,8 +185,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.Advent04Test.falseWhenNotOverlapping" />
         <item itemvalue="Gradle.Advent04Test" />
+        <item itemvalue="Gradle.Advent04Test.falseWhenNotOverlapping" />
         <item itemvalue="Gradle.Tests in 'adventTests'" />
         <item itemvalue="Gradle.Advent03Test" />
         <item itemvalue="Gradle.Advent03Test.calculateFinalValueGivenFileInputPartTwo" />

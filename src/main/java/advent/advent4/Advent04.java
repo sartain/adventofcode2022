@@ -12,7 +12,7 @@ public class Advent04 extends Advent00 implements Advent {
 
     @Override
     public String partOne() {
-        return null;
+        return String.valueOf(getSumOfOverlaps());
     }
 
     @Override
@@ -26,6 +26,10 @@ public class Advent04 extends Advent00 implements Advent {
 
     public boolean checkOverlapFromString(String input) {
         return getCampFromString(input).getOverlap();
+    }
+
+    public int getSumOfOverlaps() {
+        return (int) fileLines.map(this::checkOverlapFromString).filter(e -> e).count();
     }
 
 }
