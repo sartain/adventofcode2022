@@ -36,7 +36,7 @@ public class Camp {
     }
 
     private boolean overlaps(CampSection sectionA, CampSection sectionB) {
-        return sectionA.getLowerRange() > sectionB.getLowerRange() && sectionA.getLowerRange() < sectionB.getUpperRange();
+        return sectionA.getLowerRange() >= sectionB.getLowerRange() && sectionA.getUpperRange() <= sectionB.getUpperRange();
     }
 
 }
