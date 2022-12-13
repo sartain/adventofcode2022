@@ -1,6 +1,5 @@
 package advent.advent3;
 
-import advent.Advent;
 import advent.Advent00;
 import advent.AdventRunner;
 
@@ -8,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Advent03 extends Advent00 implements Advent {
+public class Advent03 extends Advent00 {
 
     private final char[] characterValues = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ".toCharArray();
 

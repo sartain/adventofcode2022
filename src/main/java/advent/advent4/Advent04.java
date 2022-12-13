@@ -1,10 +1,9 @@
 package advent.advent4;
 
-import advent.Advent;
 import advent.Advent00;
 import advent.AdventRunner;
 
-public class Advent04 extends Advent00 implements Advent {
+public class Advent04 extends Advent00 {
 
     public Advent04(AdventRunner value) {
         super(value, "Advent04");

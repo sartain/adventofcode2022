@@ -1,6 +1,5 @@
 package advent.advent2;
 
-import advent.Advent;
 import advent.Advent00;
 import advent.AdventRunner;
 import advent.advent2.moves.RPSMove;
@@ -10,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Advent02 extends Advent00 implements Advent {
+public class Advent02 extends Advent00 {
 
     public Advent02(AdventRunner value) {
         super(value, "Advent02");

@@ -5,9 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="10cb9e56-377a-42a4-9dfa-77054636a09f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/input/Advent05.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/input/TestAdvent05.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/advent/advent5/Advent05.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/adventTests/Advent05Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/advent/advent4/Camp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/advent/advent4/Camp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/advent/advent4/CampSection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/advent/advent4/CampSection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/advent/Advent00.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/advent/Advent00.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/advent/advent1/Advent01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/advent/advent1/Advent01.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/advent/advent2/Advent02.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/advent/advent2/Advent02.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/advent/advent3/Advent03.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/advent/advent3/Advent03.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/advent/advent4/Advent04.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/advent/advent4/Advent04.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

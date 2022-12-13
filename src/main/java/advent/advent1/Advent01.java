@@ -1,13 +1,12 @@
 package advent.advent1;
 
-import advent.Advent;
 import advent.Advent00;
 import advent.AdventRunner;
 
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class Advent01 extends Advent00 implements Advent  {
+public class Advent01 extends Advent00 {
 
     public Advent01(AdventRunner value) {
         super(value, "Advent01");

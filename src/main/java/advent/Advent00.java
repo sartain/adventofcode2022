@@ -4,7 +4,7 @@ import helper.MyFileReader;
 
 import java.util.stream.Stream;
 
-public class Advent00 {
+public class Advent00 implements Advent{
 
     protected AdventRunner adventRunner;
     protected Stream<String> fileLines;
@@ -29,4 +29,13 @@ public class Advent00 {
         }
     }
 
+    @Override
+    public String partOne() {
+        return "This is the example for part one";
+    }
+
+    @Override
+    public String partTwo() {
+        return "This is the example for part two";
+    }
 }
