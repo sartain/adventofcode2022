@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="adventTests.Advent04Test" tests="5" skipped="0" failures="0" errors="0" timestamp="2022-12-13T15:25:06" hostname="Alexs-MacBook-Pro.local" time="0.029">
+<testsuite name="adventTests.Advent04Test" tests="7" skipped="0" failures="0" errors="0" timestamp="2022-12-13T15:50:46" hostname="Alexs-MacBook-Pro.local" time="0.036">
   <properties/>
-  <testcase name="trueWhenOverlapping()" classname="adventTests.Advent04Test" time="0.023"/>
-  <testcase name="trueWhenOverlappingAlternate()" classname="adventTests.Advent04Test" time="0.001"/>
-  <testcase name="calculateSumOfOverlaps()" classname="adventTests.Advent04Test" time="0.003"/>
+  <testcase name="trueWhenOverlapping()" classname="adventTests.Advent04Test" time="0.027"/>
+  <testcase name="falseWhenNotFullyContain()" classname="adventTests.Advent04Test" time="0.001"/>
+  <testcase name="trueWhenFullyContainOverlapAlternate()" classname="adventTests.Advent04Test" time="0.001"/>
   <testcase name="splitPair()" classname="adventTests.Advent04Test" time="0.001"/>
-  <testcase name="falseWhenNotOverlapping()" classname="adventTests.Advent04Test" time="0.001"/>
+  <testcase name="trueWhenFullyContainOverlap()" classname="adventTests.Advent04Test" time="0.001"/>
+  <testcase name="falseWhenNotOverlapping()" classname="adventTests.Advent04Test" time="0.0"/>
+  <testcase name="calculateSumOfFullyContainOverlaps()" classname="adventTests.Advent04Test" time="0.002"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -12,7 +12,7 @@ public class Advent04 extends Advent00 implements Advent {
 
     @Override
     public String partOne() {
-        return String.valueOf(getSumOfOverlaps());
+        return String.valueOf(getSumOfFullyContains());
     }
 
     @Override
@@ -24,12 +24,16 @@ public class Advent04 extends Advent00 implements Advent {
         return new Camp(input);
     }
 
-    public boolean checkOverlapFromString(String input) {
-        return getCampFromString(input).getOverlap();
+    public boolean checkFullyContainFromString(String input) {
+        return getCampFromString(input).getFullyContains();
     }
 
-    public int getSumOfOverlaps() {
-        return (int) fileLines.map(this::checkOverlapFromString).filter(e -> e).count();
+    public boolean checkOverlaps(String input) {
+        return getCampFromString(input).getOverlaps();
+    }
+
+    public int getSumOfFullyContains() {
+        return (int) fileLines.map(this::checkFullyContainFromString).filter(e -> e).count();
     }
 
 }
